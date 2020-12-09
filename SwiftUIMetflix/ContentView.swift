@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var name: String = ""
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(alignment: .leading) {
+            Text("Hello, world!")
+                .padding()
+                .offset(x: -16)
+            TextField("Type your name", text: $name)
+        }
+        .padding()
     }
 }
 
